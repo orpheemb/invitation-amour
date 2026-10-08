@@ -104,7 +104,10 @@ select:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-c
 (()=>{"use strict";
 const $=id=>document.getElementById(id);
 const clean=s=>String(s||"").replace(/[\u0000-\u001f<>]/g,"").replace(/\s+/g," ").trim().slice(0,40);
-const params=new URLSearchParams(location.search);
+// Lien court (urlr.me/...#d=Jean&p=Marie&t=241...) : les infos sont après le # (jamais envoyées à un serveur).
+// Ancien lien long : les infos sont après le ?. Si le # contient des infos, on n'utilise QUE lui (jamais de mélange).
+const hashParams=new URLSearchParams(location.hash.replace(/^#/,""));
+const params=["d","p","t"].some(k=>hashParams.has(k))?hashParams:new URLSearchParams(location.search);
 const from=clean(params.get("d")),to=clean(params.get("p"));
 const tel=String(params.get("t")||"").replace(/\D/g,"");
 const telOk=/^[1-9]\d{7,14}$/.test(tel);
