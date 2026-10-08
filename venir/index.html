@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Tu viens ? · Dimanche de l’Amour</title>
+<meta name="description" content="Confirme ta présence en un clic. Dimanche de l’Amour : dimanche 11 octobre, 9 h 30, ICC Moanda (Belle-Vue 1).">
+<meta name="robots" content="noindex">
+<meta name="referrer" content="origin">
+<meta name="theme-color" content="#FCF1E0">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Tu viens au Dimanche de l’Amour ?">
+<meta property="og:description" content="Confirme ta présence en un clic. Dimanche 11 octobre, 9 h 30, ICC Moanda.">
+<meta property="og:image" content="https://orpheemb.github.io/invitation-amour/apercu.jpg">
+<meta property="og:image:width" content="600">
+<meta property="og:image:height" content="600">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E❤️%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FCF1E0;--ink:#3B1417;--muted:#7A4B45;--field:#FFFDF8;--line:#E3CBA8;--accent:#C8232C;--btn-red:#C8232C;--btn-green:#1B7F46;--shadow:rgba(142,20,32,.22)}
+@media (prefers-color-scheme:dark){:root{--bg:#26110F;--ink:#FBEBD5;--muted:#D9B4A6;--field:#38191A;--line:#5E2F2F;--accent:#FF7A7E;--shadow:rgba(0,0,0,.55)}}
+*,::after,::before{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.45 Nunito,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-text-size-adjust:100%}
+main{max-width:480px;margin:0 auto;padding:calc(22px + env(safe-area-inset-top,0px)) 18px calc(30px + env(safe-area-inset-bottom,0px))}
+.brand{margin:0;font-weight:800;font-size:15px;color:var(--muted)}
+.hello{margin:18px 0 0;font:800 20px/1.3 Nunito,system-ui,sans-serif;overflow-wrap:anywhere}
+h1{margin:6px 0 8px;font:400 clamp(30px,9.6vw,46px)/1.05 Anton,Impact,"Arial Narrow",sans-serif;letter-spacing:.005em}
+.lead{margin:0 0 20px;color:var(--muted);font-weight:600;overflow-wrap:anywhere}
+a{color:var(--accent)}
+.when{margin:0 0 22px;padding:16px 18px;border:2px solid var(--line);border-radius:18px;background:var(--field)}
+.when p{margin:0;font-weight:600}
+.when p+p{margin-top:6px}
+.when strong{font-weight:800}
+.rsvp label{display:block;margin:0 0 6px;font-weight:800;font-size:16px}
+.rsvp label small{font-weight:600;color:var(--muted);font-size:14px}
+select{width:100%;font:800 20px/1.2 Nunito,system-ui,sans-serif;padding:13px 14px;border-radius:14px;border:2px solid var(--line);background:var(--field);color:var(--ink)}
+select:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-color:var(--accent)}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;min-height:58px;padding:12px 18px;border-radius:14px;color:#fff;font:800 19px/1.15 Nunito,system-ui,sans-serif;text-align:center;text-decoration:none;-webkit-tap-highlight-color:transparent}
+.btn.yes{margin-top:16px;background:var(--btn-green)}
+.btn.no{margin-top:12px;min-height:52px;background:transparent;border:2px solid var(--ink);color:var(--ink);font-size:17px}
+.btn.link{min-height:52px;font-size:17px;background:var(--field);border:2px solid var(--line);color:var(--ink);justify-content:flex-start;text-align:left}
+.btn.link+.btn.link{margin-top:10px}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.hint{margin:12px 2px 0;color:var(--muted);font-weight:600;font-size:15px;overflow-wrap:anywhere}
+.thanks{margin:16px 0 0;padding:14px 16px;border-radius:14px;background:var(--btn-green);color:#fff;font-weight:800;overflow-wrap:anywhere}
+.thanks[hidden],.rsvp[hidden],.fallback[hidden],.hello[hidden]{display:none}
+.fallback{margin:0 0 22px;padding:16px 18px;border:2px solid var(--line);border-radius:18px;background:var(--field);font-weight:700}
+.more{margin:28px 0 0}
+.more h2{margin:0 0 12px;font:400 26px/1.05 Anton,Impact,"Arial Narrow",sans-serif;letter-spacing:.005em}
+.info{margin:24px 2px 0;color:var(--muted);font-weight:600;font-size:16px}
+.info p{margin:0 0 8px}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<main>
+  <p class="brand">ICC Moanda</p>
+  <p class="hello" id="hello" hidden></p>
+  <h1>Tu viens au Dimanche de l’Amour&nbsp;?</h1>
+  <p class="lead" id="lead">Confirme ta présence en un clic.</p>
+
+  <section class="when" aria-label="Quand et où">
+    <p>📅 <strong>Dimanche 11&nbsp;octobre, 9&nbsp;h&nbsp;30</strong></p>
+    <p>📍 ICC Moanda, Belle-Vue 1</p>
+    <p>👗 Tenue&nbsp;: rose ou rouge</p>
+  </section>
+
+  <section class="rsvp" id="rsvp" hidden>
+    <label for="n">Combien de personnes viennent&nbsp;? <small>(toi compris)</small></label>
+    <select id="n">
+      <option value="1">1 personne</option>
+      <option value="2">2 personnes</option>
+      <option value="3">3 personnes</option>
+      <option value="4">4 personnes</option>
+      <option value="5">5 personnes</option>
+      <option value="6">6 personnes</option>
+    </select>
+    <a class="btn yes" id="yes" href="#" data-ev="rsvp-je-viens" data-title="Je viens">✅ Oui, je viens</a>
+    <a class="btn no" id="no" href="#" data-ev="rsvp-pas-dispo" data-title="Je ne peux pas venir">Je ne pourrai pas venir</a>
+    <p class="hint" id="hint">WhatsApp s’ouvre avec un message déjà écrit. Il te reste à appuyer sur «&nbsp;Envoyer&nbsp;».</p>
+    <p class="thanks" id="thanks" role="status" hidden></p>
+  </section>
+
+  <p class="fallback" id="fallback" hidden>Pour confirmer, réponds simplement «&nbsp;Je viens&nbsp;» à la personne qui t’a invité(e), sur WhatsApp.</p>
+
+  <section class="more" aria-labelledby="more-title">
+    <h2 id="more-title">Et aussi</h2>
+    <a class="btn link" href="https://urlr.me/K5tA3c" data-ev="rsvp-video" data-title="Voir la vidéo">🎬 C’est quoi le Dimanche de l’Amour&nbsp;? Regarde la vidéo</a>
+    <a class="btn link" href="https://urlr.me/qYPUfD" data-ev="rsvp-invite" data-title="Inviter quelqu’un">💌 Invite quelqu’un à ton tour</a>
+    <a class="btn link" href="https://whatsapp.com/channel/0029Vb6yDltCxoB1cEQaCy3K" data-ev="rsvp-chaine" data-title="Chaîne WhatsApp">📲 Rejoins la chaîne WhatsApp de l’église</a>
+  </section>
+
+  <section class="info" aria-label="Infos pratiques">
+    <p>Infos&nbsp;: <a href="tel:060352652">060352652</a> / <a href="tel:077758175">077758175</a></p>
+  </section>
+</main>
+<script src="../stats.js" defer></script>
+<script>
+(()=>{"use strict";
+const $=id=>document.getElementById(id);
+const clean=s=>String(s||"").replace(/[\u0000-\u001f<>]/g,"").replace(/\s+/g," ").trim().slice(0,40);
+const params=new URLSearchParams(location.search);
+const from=clean(params.get("d")),to=clean(params.get("p"));
+const tel=String(params.get("t")||"").replace(/\D/g,"");
+const telOk=/^[1-9]\d{7,14}$/.test(tel);
+
+if(to){const h=$("hello");h.textContent="Bonjour "+to+" ❤️";h.hidden=false}
+if(from)$("lead").textContent=from+" t’invite avec joie. Confirme ta présence en un clic.";
+
+const yes=$("yes"),no=$("no"),sel=$("n"),thanks=$("thanks");
+const who=from||"la personne qui t’a invité(e)";
+
+const wa=text=>"https://wa.me/"+tel+"?text="+encodeURIComponent(text);
+const hello="Bonjour"+(from?" "+from:"")+" ❤️\n"+(to?"C’est "+to+". ":"");
+function build(){
+  const n=Math.max(1,Math.min(6,parseInt(sel.value,10)||1));
+  let yesText=hello+"Je confirme ma présence au Dimanche de l’Amour, dimanche 11 octobre à 9 h 30 ✅";
+  if(n>1)yesText+="\nNous serons "+n+" personnes.";
+  yesText+="\nÀ dimanche !";
+  yes.href=wa(yesText);
+  no.href=wa(hello+"Merci pour ton invitation au Dimanche de l’Amour. Je ne pourrai pas venir cette fois, mais je pense bien à vous ❤️");
+}
+
+if(telOk){
+  $("rsvp").hidden=false;
+  if(from)$("hint").textContent="WhatsApp s’ouvre avec un message déjà écrit pour "+from+". Il te reste à appuyer sur « Envoyer ».";
+  sel.addEventListener("change",build);
+  build();
+  const merci=msg=>{thanks.textContent=msg;thanks.hidden=false};
+  yes.addEventListener("click",()=>merci("Merci"+(to?" "+to:"")+" ! Si tu as appuyé sur « Envoyer » dans WhatsApp, "+who+" a bien reçu ta réponse. À dimanche ❤️"));
+  no.addEventListener("click",()=>merci("Merci de ta réponse. Si tu as appuyé sur « Envoyer » dans WhatsApp, "+who+" l’a bien reçue."));
+}else{
+  $("fallback").hidden=false;
+}
+
+document.addEventListener("click",e=>{
+  const a=e.target.closest&&e.target.closest("[data-ev]");
+  if(a&&typeof window.ddaTrack==="function")window.ddaTrack(a.dataset.ev,a.dataset.title);
+});
+})();
+</script>
+</body>
+</html>
