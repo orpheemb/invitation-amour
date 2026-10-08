@@ -12,7 +12,7 @@
 */
 (() => {
   "use strict";
-  const CODE = "";
+  const CODE = "orpheemb";
 
   window.ddaTrack = function () {};
   if (!/^[a-z0-9][a-z0-9-]{0,40}$/.test(CODE)) return;
@@ -47,11 +47,14 @@
 
   // Envoi d'un comptage à GoatCounter (même adresse et mêmes paramètres que son script officiel,
   // mais SANS l'adresse complète de la page, qui peut contenir des prénoms et un numéro).
+  // ns=true : chaque ouverture et chaque action est comptée (sinon GoatCounter ne compte qu'une fois
+  // par visiteur, et plusieurs cartes créées à la suite par la même personne n'en feraient qu'une).
   const send = (path, title, isEvent, referrer) => {
     const q = new URLSearchParams({
       p: path,
       t: title || path,
       s: String(window.screen && window.screen.width || 0),
+      ns: "true",
       rnd: Math.random().toString(36).slice(2, 7)
     });
     if (isEvent) q.set("e", "true");
